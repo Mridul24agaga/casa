@@ -206,144 +206,55 @@
                         
                     </div>
                     
-                    <div class="button-container" id="buttonContainer">
-                        <button class="modern-btn" id="buyBtn">Buy</button>
-                        <button class="modern-btn" id="sellBtn">Sell</button>
-                        <button class="modern-btn" id="rentBtn">Rent</button>
-                    </div>
-                    
-                    <div class="embed-container" id="formContainer" style="display: none;">
+                    <div class="embed-container">
                         <script type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
-                        <zapier-interfaces-page-embed page-id='cm06tw52n000argzvruuvn551' no-background='true' style='max-width: 600px; height: 800px; transform: scale(0.6); transform-origin: top right;'></zapier-interfaces-page-embed>
+                        <zapier-interfaces-page-embed page-id='cm06tw52n000argzvruuvn551' no-background='true'  style='max-width: 600px; height: 800px; transform: scale(0.6); transform-origin: top right;'></zapier-interfaces-page-embed>
                     </div>
                     
                     <style>
-                        /* Container to center the buttons */
-                        .button-container {
-                            display: flex;
-                            justify-content: center;
-                            margin-bottom: 20px;
-                        }
-                    
-                        /* Modern button styles */
-                        .modern-btn {
-                            padding: 15px 40px;
-                            font-size: 16px;
-                            font-weight: bold;
-                            letter-spacing: 1px;
-                            text-transform: uppercase;
-                            color: #ffffff;
-                            background: linear-gradient(135deg, #6c63ff, #009ffd);
-                            border: none;
-                            border-radius: 30px;
-                            cursor: pointer;
-                            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-                            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-                            margin: 0 15px;
-                            outline: none;
-                            position: relative;
-                            overflow: hidden;
-                            margin-top: 20px;
-                        }
-                    
-                        /* Button hover effect */
-                        .modern-btn:hover {
-                            background: linear-gradient(135deg, #009ffd, #6c63ff);
-                            transform: translateY(-3px);
-                            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-                        }
-                    
-                        /* Button active effect */
-                        .modern-btn:active {
-                            transform: translateY(1px);
-                            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-                        }
-                    
-                        /* Embed container styles */
                         .embed-container {
-                            position: absolute;
-                            top: -10px;
-                            left: 50px;
-                            right: -350px;
-                            max-width: 800px;
+                            position: absolute; 
+                            top: -10px; 
+                            left: 50px; 
+                            right: -350px; 
+                            max-width: 800px; 
                             height: 850px;
-                            margin: 0 auto;
+                            margin: 0 auto; 
                             display: flex;
                             align-items: center;
                             justify-content: center;
                             background-color: transparent;
-                            box-shadow: none;
-                            overflow: hidden;
+                            box-shadow: none; 
+                            overflow: hidden; 
+
+                        }
+                    
+                        zapier-interfaces-page-embed {
+                            width: 100%; 
+                            height: 100%;
+                            border: none;
                         }
                     
                         /* Responsive adjustments */
                         @media (max-width: 768px) {
                             .embed-container {
-                                max-width: 1000px;
+                                max-width: 1000px; 
                                 width: 1000px;
-                                height: auto;
+                                height: auto; 
                                 padding: 0;
                                 position: relative;
-                                left: -150px;
-                                right: 0;
+                                left: -150px; 
+                                right: 0; 
                                 transform: none;
                                 margin: 0;
                                 top: -20px;
                             }
-
-                            .modern-btn {
-                                margin-top: -20px;
-                            }
-                        }
-                    
-                        /* Zapier form element styling */
-                        zapier-interfaces-page-embed {
-                            width: 100%;
-                            height: 100%;
-                            border: none;
                         }
                     
                         zapier-interfaces-page-embed::part(built-on-zapier) {
                             display: none;
                         }
-                    </style>
-                    
-                    <script>
-                        document.getElementById('buyBtn').addEventListener('click', function() {
-                            handleFormDisplay();
-                            hideButton('buyBtn');
-                            setTimeout(function() {
-                                window.location.href = 'https://happyhome.casa/newbuyer.html';
-                            }, 7000); // Redirect after 7 seconds
-                        });
-                    
-                        document.getElementById('sellBtn').addEventListener('click', function() {
-                            handleFormDisplay();
-                            hideButton('sellBtn');
-                            setTimeout(function() {
-                                window.location.href = 'https://happyhome.casa/newseller.html';
-                            }, 7000); // Redirect after 7 seconds
-                        });
-                    
-                        document.getElementById('rentBtn').addEventListener('click', function() {
-                            handleFormDisplay();
-                            hideButton('rentBtn');
-                            setTimeout(function() {
-                                window.location.href = 'https://happyhome.casa/newrental.html';
-                            }, 7000); // Redirect after 7 seconds
-                        });
-                    
-                        function handleFormDisplay() {
-                            document.getElementById('formContainer').style.display = 'flex';
-                        }
-                    
-                        function hideButton(buttonId) {
-                            document.getElementById(buttonId).style.display = 'none';
-                        }
-                    </script>
-                    
-                    
-                    
+                    </style>                 
                 </div>
             </div>
         </div>
