@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Happy Home</title>
-    <meta name="description" content="Helping families find their perfect home for over 10 years! Locally and family-owned, we’re dedicated to serving our community. Personalized service with a focus on your needs. Let us help you find the place you’ll love to call home!">
+    <meta name="description" content="Helping families find their perfect home for over 10 years! Locally and family-owned, we're dedicated to serving our community. Personalized service with a focus on your needs. Let us help you find the place you'll love to call home!">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="Black Oranye Archetype Inspired Logo (11) (1).png">
 
@@ -23,109 +23,150 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
     <style>
-        /* Mobile-specific styles */
-        @media (max-width: 991px) {
+        /* Base styles */
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header__section {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .main__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .main__menu--wrapper {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main__menu--items {
+            margin: 0 10px;
+        }
+
+        .main__menu--link {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            padding: 10px;
+            display: block;
+        }
+
+        .main__menu--link:hover {
+            color: #007bff;
+        }
+
+        /* Mobile menu button */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
             .main__menu {
+                display: none;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #f8f9fa;
+                z-index: 1000;
+            }
+
+            .main__menu.active {
                 display: block;
             }
 
             .main__menu--wrapper {
-                flex-direction: row; /* Change to row for horizontal layout */
-                justify-content: center; /* Center items horizontally */
-                background-color: #fff; /* Adjust background color as needed */
-                width: 100%;
-                padding: 10px 0; /* Optional padding */
+                flex-direction: column;
             }
 
             .main__menu--items {
-                margin: 0 5px; /* Reduced horizontal spacing between items */
+                margin: 0;
                 text-align: center;
             }
 
             .main__menu--link {
+                padding: 15px;
+            }
+
+            .mobile-menu-btn {
                 display: block;
-                padding: 10px 20px;
-                text-decoration: none;
-                color: #000; /* Adjust text color as needed */
-                font-weight: bold;
             }
+        }
 
-            .main__menu--link:hover {
-                color: #007bff; /* Adjust hover color as needed */
-            }
-
-            .offcanvas__header--menu__open {
-                display: none; /* Hide offcanvas button on mobile if not needed */
-            }
+        /* iframe styles */
+        iframe {
+            width: 100%;
+            min-height: 100vh;
+            border: none;
         }
     </style>
 </head>
 
 <body>
-    <header id="home" class="header__section position-relative color-accent-2">
-        <div class="header__sticky">
-            <div class="container">
-                <div class="main__header d-flex justify-content-between align-items-center">
-                    <!-- Offcanvas menu button (can be removed if not needed for mobile) -->
-                    <div class="offcanvas__header--menu__open d-lg-none">
-                        <a class="offcanvas__header--menu__open--btn" href="javascript:void(0)" data-offcanvas>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon offcanvas__header--menu__open--svg" viewBox="0 0 512 512">
-                                <path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 160h352M80 256h352M80 352h352" />
-                            </svg>
-                            <span class="visually-hidden">Offcanvas Menu Open</span>
-                        </a>
-                    </div>
-
-                    <!-- Main Logo (optional) -->
-                    <div class="main__logo">
-                        <!-- Logo image or text could be added here -->
-                    </div>
-
-                    <!-- Navigation Menu -->
-                    <div class="main__menu">
-                        <nav class="main__menu--navigation">
-                            <ul class="main__menu--wrapper d-flex flex-row">
-                                <li class="main__menu--items">
-                                    <a class="main__menu--link" href="#newbuyer">Newbuyer</a>
-                                </li>
-                                <li class="main__menu--items">
-                                    <a class="main__menu--link" href="#newrental">Newrental</a>
-                                </li>
-                                <li class="main__menu--items">
-                                    <a class="main__menu--link" href="#newseller">NewSeller</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+    <header id="home" class="header__section">
+        <div class="container">
+            <div class="main__header">
+                <div class="main__logo">
+                    <!-- Add your logo here if needed -->
                 </div>
+
+                <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+
+                <nav class="main__menu">
+                    <ul class="main__menu--wrapper">
+                        <li class="main__menu--items">
+                            <a class="main__menu--link" href="#newbuyer">Newbuyer</a>
+                        </li>
+                        <li class="main__menu--items">
+                            <a class="main__menu--link" href="#newrental">Newrental</a>
+                        </li>
+                        <li class="main__menu--items">
+                            <a class="main__menu--link" href="#newseller">NewSeller</a>
+                        </li>
+                        <li class="main__menu--items">
+                            <a class="main__menu--link" href="#westtexascorsos">Westtexascorsos</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
-    <!-- End header area -->
+
+    <iframe id="newbuyer" src="https://app.prospectx.com/cb/webform/b3916572-5790-4740-a41f-806d9bf2cc55" title="prospectx-webform"></iframe>
+
+    <iframe id="newrental" src="https://app.prospectx.com/cb/webform/0690373b-54ec-4830-b9cb-1f8ae535fd25" title="prospectx-webform"></iframe>
+
+    <iframe id="newseller" src="https://app.prospectx.com/cb/webform/4678ed5c-53f4-4a81-9fb9-b9f38c58d236" title="prospectx-webform"></iframe>
+
+    <iframe id="westtexascorsos" src="https://app.prospectx.com/cb/webform/65759800-906e-4041-9004-40cffd019b89" title="prospectx-webform"></iframe>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector('.main__menu');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 
 </html>
-
-
-
-
-
-
-        
-        </div>
-    </div>
-
-    <iframe id="newbuyer" src="https://app.prospectx.com/cb/webform/b3916572-5790-4740-a41f-806d9bf2cc55" title="prospectx-webform" style="min-height:100vh;min-width:100%;border:none;"></iframe>
- 
-
-
-    <iframe id="newrental" src="https://app.prospectx.com/cb/webform/0690373b-54ec-4830-b9cb-1f8ae535fd25" title="prospectx-webform" style="min-height:100vh;min-width:100%;border:none;"></iframe>
-
-
-
-    <iframe id="newseller" src="https://app.prospectx.com/cb/webform/4678ed5c-53f4-4a81-9fb9-b9f38c58d236" title="prospectx-webform" style="min-height:100vh;min-width:100%;border:none;"></iframe>
-
-
-
-
-    
