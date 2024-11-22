@@ -1,106 +1,132 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-
 <head>
-  <meta charset="utf-8">
-  <title>Happy Home</title>
-  <meta name="description" content="Helping families find their perfect home for over 10 years! Locally and family-owned, we’re dedicated to serving our community. Personalized service with a focus on your needs. Let us help you find the place you’ll love to call home!">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" type="image/x-icon" href="Black Oranye Archetype Inspired Logo (11) (1).png">
+    <meta charset="utf-8">
+    <title>Happy Home</title>
+    <meta name="description" content="Helping families find their perfect home for over 10 years! Locally and family-owned, we're dedicated to serving our community. Personalized service with a focus on your needs. Let us help you find the place you'll love to call home!">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="Black Oranye Archetype Inspired Logo (11) (1).png">
     
-  <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=Nunito:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Nunito:wght@300;400;500;600;700&family=Quicksand:wght@300..700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/glightbox.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
-  
-
-  
-  <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/plugins/glightbox.min.css">
-
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-
-
+    <style>
+        .header__sticky {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .main__header {
+            padding: 15px 0;
+        }
+        .main__menu--wrapper {
+            align-items: center;
+        }
+        .main__menu--items {
+            margin: 0 15px;
+        }
+        .main__menu--link {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .main__menu--link:hover {
+            color: #169AFF;
+        }
+        .contact-button {
+            background-color: #169AFF;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact-button:hover {
+            background-color: #1280d1;
+        }
+        @media (max-width: 991px) {
+            .main__menu {
+                display: none;
+            }
+            .offcanvas__header--menu__open {
+                display: block;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    
-
     <header id="home" class="header__section position-relative color-accent-2">
-        
         <div class="header__sticky">
             <div class="container">
                 <div class="main__header d-flex justify-content-between align-items-center">
-                    <!-- Offcanvas menu button -->
-                    <div class="offcanvas__header--menu__open ">
+                    <div class="offcanvas__header--menu__open d-lg-none">
                         <a class="offcanvas__header--menu__open--btn" href="javascript:void(0)" data-offcanvas>
                             <svg xmlns="http://www.w3.org/2000/svg" class="ionicon offcanvas__header--menu__open--svg" viewBox="0 0 512 512"><path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 160h352M80 256h352M80 352h352"/></svg>
-                            <span class="visually-hidden">Offcanvas Menu Open</span>
+                            <span class="visually-hidden">Menu</span>
                         </a>
                     </div>
                     
-                    <!-- Main Logo (optional) -->
-                    <div class="main__logo">
-                        <!-- Logo image or text could be added here -->
+                    <div class="main__logo d-lg-none">
+                        <img src="logoooooo (1).png" alt="Happy Home Logo" style="width: 50px; height: 50px;">
                     </div>
     
-                    <!-- Navigation Menu -->
-                    <div class="main__menu d-none d-lg-block">
-                        <nav class="main__menu--navigation">
-                            <ul class="main__menu--wrapper d-flex">
-                                <img src="logoooooo (1).png" alt="Home" class="home-logo d-none d-lg-inline-block" style="width: 50px; height: 50px; margin-right: 158px; margin-top: 15px;">
-                                <!-- Home link with logo -->
-                                <li class="main__menu--items">
-                                    <a class="main__menu--link" href="index.html">
-                                        Home 
-                                    </a>
-                                </li>
+                    <nav class="main__menu d-none d-lg-block">
+                        <ul class="main__menu--wrapper d-flex">
+                            <li class="main__menu--items">
+                                <a href="index.html" class="main__menu--link">
+                                    <img src="logoooooo (1).png" alt="Home" class="home-logo" style="width: 50px; height: 50px; margin-right: 30px;">
+                                </a>
+                            </li>
+                            <li class="main__menu--items">
+                                <a class="main__menu--link" href="index.html">Home</a>
+                            </li>
+                            <li class="main__menu--items">
+                                <a class="main__menu--link" href="index.html#service">Services</a>
+                            </li>
+                            <li class="main__menu--items">
+                                <a class="main__menu--link" href="index.html#about">About Us</a>
+                            </li>
+                            <li class="main__menu--items">
+                                <a class="main__menu--link" href="rentals.html">Rental Listings</a>
+                            </li>
+                            <li class="main__menu--items">
+                                <a class="main__menu--link" href="seller.html">Homes For Sale</a>
+                            </li>
+                            <li class="main__menu--items">
+                                <a class="main__menu--link" href="faq.html">FAQ's</a>
+                            </li>
+                            <li class="main__menu--items">
+                                <a class="main__menu--link" href="index.html#contact">Contact Us</a>
+                            </li>
+                        </ul>
+                    </nav>
     
-                                <!-- Other menu items -->
-                                <li class="main__menu--items">
-                                    <a class="main__menu--link" href="index.html#service"> Services </a>
-                                </li>
-                                <li class="main__menu--items">
-                                    <a class="main__menu--link" href="index.html#about"> About Us </a>
-                                </li>
-                                <li class="main__menu--items">
-                                    <a class="main__menu--link" href="rentals.html"> Rental Listings </a>
-                                </li>
-                                <li class="main__menu--items">
-                                    <a class="main__menu--link" href="seller.html"> Homes For Sale </a>
-                                </li>
-                                <li class="main__menu--items">
-                                    <a class="main__menu--link" href="faq.html"> FAQ's </a>
-                                </li>
-                                <li class="main__menu--items">
-                                    <a class="main__menu--link" href="index.html#contact"> Contact Us </a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-    
-                    <!-- Contact number with phone icon -->
-                    <div class="main__header--right d-flex align-items-center">
-                        <a href="tel:+4322203532" style="text-decoration: none; color: inherit;">
-                            <button style="background-color: #169AFF; color: white; border: none; border-radius: 8px; padding: 10px 20px; display: flex; align-items: center; font-size: 18px; cursor: pointer;">
-                                &#9742; <!-- Unicode character for phone symbol -->
-                                <span style="margin-left: 8px;">(432) 220-3532</span>
-                            </button>
+                    <div class="main__header--right">
+                        <a href="tel:+4322203532" class="contact-button">
+                            <span>&#9742;</span>
+                            <span style="margin-left: 8px;">(432) 220-3532</span>
                         </a>
                     </div>
-                    
                 </div>
             </div>
         </div>
     </header>
-    
-    <!-- End header area -->
+</body>
+</html>
+
 
 
     <!-- Start Offcanvas header menu -->
@@ -151,42 +177,37 @@
         </div>
     </div>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
         h1 {
             text-align: center;
             color: #0099ff;
+            font-size: 35px;
+            margin-top: 30px;
         }
-        .containerr {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 20px;
         }
         .listing {
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 60px;
             padding: 20px;
-            width: calc(33.333% - 20px);
-            box-sizing: border-box;
-            margin-top: 60px;
-            object-fit: contain;
-        }
-        .listi {
-            background-color: #fff;
-            border-radius: 8px;
-            margin-bottom: 60px;
-            padding: 20px;
-            width: calc(33.333% - 20px);
-            box-sizing: border-box;
-            margin-top: 60px;
-            object-fit: contain;
+            display: flex;
+            flex-direction: column;
         }
         .listing img {
             width: 100%;
-            height: auto;
-            aspect-ratio: 1/1;
+            height: 300px;
             object-fit: cover;
             border-radius: 8px;
         }
@@ -199,6 +220,7 @@
         .listing p {
             margin-bottom: 15px;
             text-align: center;
+            flex-grow: 1;
         }
         .btn {
             background-color: #0099ff;
@@ -209,61 +231,42 @@
             border-radius: 5px;
             cursor: pointer;
             text-decoration: none;
-            display: inline-block;
+            display: block;
             text-align: center;
-            margin-left: 80px;
+            margin: 0 auto;
+            width: fit-content;
         }
         @media (max-width: 768px) {
-            .listing {
-                width: calc(50% - 20px);
+            .container {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
         @media (max-width: 480px) {
-            .listing {
-                width: 100%;
+            .container {
+                grid-template-columns: 1fr;
             }
         }
     </style>
-    
 
-
-<h1 style="font-size: 35px; margin-top: 30px;">Rental Listing</h1>
-<div class="containerr">
-   
-   
-    <div class="listing">
-        <img src="10.png" alt="1106 E Nobles">
-        <h2>111 W Dunnam St - A</h2>
-        <p>2 bedroom 1 bathroom apartment available for rent in Hobbs NM. Great for a family at an unbeatable location and price! No Application Fee ! Move in ready and parking space available !</p>
-        <a href="https://ffc1db98.app.doorloop.com/tenant-portal/rental-applications/listing?companyId=66887f1a34aa315271899ef7&listingId=671923d017d9d8b71d057e32&source=CompanyLink" class="btn">See Rentals</a>
+<h1>Rental Listing</h1>
+    <div class="container">
+        <div class="listing">
+            <img src="10.png" alt="111 W Dunnam St - A">
+            <h2>111 W Dunnam St - A</h2>
+            <p>2 bedroom 1 bathroom apartment available for rent in Hobbs NM. Great for a family at an unbeatable location and price! No Application Fee! Move in ready and parking space available!</p>
+            <a href="https://ffc1db98.app.doorloop.com/tenant-portal/rental-applications/listing?companyId=66887f1a34aa315271899ef7&listingId=671923d017d9d8b71d057e32&source=CompanyLink" class="btn">See Rentals</a>
+        </div>
+        <div class="listing">
+            <img src="15.png" alt="1101 E Kentucky Ave">
+            <h2>1101 E Kentucky Ave</h2>
+            <p>4 bedrooms 2 bathroom Rent - $2,200 Deposit - $1,000 FREE APPLICATION No background/credit check Contact us today to schedule a showing 432-286-3455</p>
+            <a href="https://ffc1db98.app.doorloop.com/tenant-portal/rental-applications/listing?companyId=66887f1a34aa315271899ef7&listingId=668c3df830580db5cca94829&source=CompanyLink" class="btn">See Rentals</a>
+        </div>
+        <div class="listi">
+           
+        </div>
+      
     </div>
-    <div class="listing">
-    <div class="listing">
-        <img src="11.png" alt="1106 E Nobles">
-        <h2>2022 Monterey St - 2 </h2>
-        <p>3 bedrooms 1 bathroom Rent - $1,100 Deposit - $1,000 - Pets Allowed - Utilities Not Included FREE APPLICATION Contact us today to schedule a showing 432-535-7111</p>
-        <a href="https://ffc1db98.app.doorloop.com/tenant-portal/rental-applications/listing?companyId=66887f1a34aa315271899ef7&listingId=668c07205a1f8d854ae4598c&source=CompanyLink" class="btn">See Rentals</a>
-    </div>
-    <div class="listing">
-        <img src="15.png" alt="1106 E Nobles">
-        <h2>1101 E Kentucky Ave</h2>
-        <p>4 bedrooms 2 bathroom Rent - $2,200 Deposit - $1,000 FREE APPLICATION No background/credit check Contact us today to schedule a showing 432-286-3455</p>
-        <a href="https://ffc1db98.app.doorloop.com/tenant-portal/rental-applications/listing?companyId=66887f1a34aa315271899ef7&listingId=668c3df830580db5cca94829&source=CompanyLink" class="btn">See Rentals</a>
-    </div>
-    <div class="listing">
-        <img src="Homes for Rent Master Template (23).png" alt="1106 E Nobles">
-        <h2>108 W Kansas UNIT A</h2>
-        <p>1 bedrooms 1 bathroom Rent - $1,100 Deposit - $1,000 FREE APPLICATION No background/credit check Contact us today to schedule a showing 432-286-3455</p>
-        <a href="https://ffc1db98.app.doorloop.com/tenant-portal/rental-applications/listing?companyId=66887f1a34aa315271899ef7&listingId=668c03edb7ad1f5a8157db8c&source=CompanyLink" class="btn">See Rentals</a>
-    </div>
-    <div class="listi">
-
-    </div>
-    
-   
-  
-</div>
-    
 
 <script> window.chtlConfig = { chatbotId: "1662281515" } </script>
 <script async data-id="1662281515" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
